@@ -1,78 +1,78 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+[Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control](https://doi.org/10.1287/ijoc.2022.0236) by Mu Du, Hongtao Yu, Nan Kong. 
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2022.0236
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2022.0236.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{CacheTest,
-  author =        {T. Ralphs},
+@article{TRL for MOMDP-TVIVP,
+  author =        {Mu Du, Hongtao Yu, Nan Kong},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
+  title =         {{Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control}},
+  year =          {2024},
+  doi =           {10.1287/ijoc.2022.0236.cd},
+  url =           {https://github.com/INFORMSJoC/2022.0236},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+This repository includes the source code and computational results of transfer reinforcement learning approach for randomly generated numerical instances presented in the paper. The codes and random instance genereation work in a Miniforge3 environment with Python 3.9 in a M1 mac platform.
 
-## Building
+## Numerical Results on Solution Optimality and Robustness
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+The exp1_case folder contains the data, script and codes for numercail results in Section 4.2.
+1. The Jupyter Notebook files [DRL_uncertainty_result.ipynb](https://github.com/tkralphs/JoCTemplate) and [TRL_uncertainty_result.ipynb](https://github.com/tkralphs/JoCTemplate) are for testing the performance of the TRL under different uncertainty intervals (Figure 4.1 and Figure 4.4) and record the training and testing process of network. Please excute the former code first for network offline training and then excute the later one for network performance testing.
+2. The Jupyter Notebook files [DRL_out_of_sample.ipynb](https://github.com/tkralphs/JoCTemplate) and TRL_out_of_sample.ipynb are for testing the performance of the TRL under different out-of-sample scenarios with bias to intervals in Figure 4.2. Please excute the former code first for network offline training and then excute the later one for network performance testing. The training and testing reuslt are recorded in the Jupyter Notebook file "DRL_out_of_sample.ipynb" and "TRL_out_of_sample.ipynb" .
+3. The codes in "DRL_out_of_sample.ipynb" and "distribution shift/TRL_out_of_sample_result distribution shift.ipynb" are for testing the performance of the TRL under different out-of-sample scenarios with distributional shifts. The former code is for the netowrk offline training and the later one is for netowrk testing. The testing reuslt is recorded in the Jupyter Notebook file "distribution shift/TRL_out_of_sample_result distribution shift.ipynb" and reported in Figure 4.3.
 
+## Numerical Results on Algorithm efficiency and Scability
+
+The exp2_case folder contains the data, script and codes for numercail results in Section 4.3 & 4.4.
+
+The following files:
 ```
-make mult
+Offline_stage_4patch.ipynb
+Test_online_4patch.ipynb
+```
+```
+Offline_stage_8patch.ipynb
+Test_online_8patch.ipynb
+```
+```
+Offline_stage_12patch.ipynb
+exp2/Test_online_12patch.ipynb
+```
+```
+Offline_stage_16patch.ipynb
+Test_online_16patch.ipynb
+```
+```
+Offline_stage_20patch.ipynb
+Test_online_20patch.ipynb
+```
+```
+Offline_stage_24patch.ipynb
+Test_online_24patch.ipynb
 ```
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
-
-## Results
-
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
+are for testing the performance of the TRL on scaling up instance with factor n=4, 8, 12, 16, 20, 24. 
 
 ## Replicating
 
