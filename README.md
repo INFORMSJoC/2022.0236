@@ -68,6 +68,6 @@ record the training and testing process of the TRL under high-level and low-leve
 > [!NOTE]
 > Due to file upload size limitations, we have stored the initialization and training results of neural network weights on a cloud drive. Please refer to the Readme file in the **network initialization** and **result** folders in exp1_case, exp2_case, and exp3_case for details about these results.
 > 
-> If there is a need to retrain the neural network, please modify the code "istrain=1" to "istrain=0" in line 12 of the Train_main file in exp1_case, exp2_case, and exp3_case forlers.
+> If there is a need to retrain the neural network, please modify the code "istrain=1" to "istrain=0" in line 12 within the Train_main file in exp1_case, exp2_case, and exp3_case forlers.
 > 
 > For any issue in replication of these results, please contact [yuht@dlut.edu.cn](yuht@dlut.edu.cn)
