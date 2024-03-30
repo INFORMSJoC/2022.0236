@@ -51,41 +51,23 @@ The _**exp2_case**_ folder contains the data, script and codes for numerical res
 | [Offline_stage_4patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_4patch)  | [Offline_stage_8patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_8patch.ipynb)  | [Offline_stage_12patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_12patch.ipynb) | [Offline_stage_16patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_16patch.ipynb) |[Offline_stage_20patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_20patch.ipynb) | [Offline_stage_24patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_24patch.ipynb) |
 | [Test_online_4patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_4patch.ipynb)  | [Test_online_8patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_8patch.ipynb) | [Test_online_12patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_12patch.ipynb) | [Test_online_16patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_16patch.ipynb) | [Test_online_20patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_20patch.ipynb) |[Test_online_24patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_24patch.ipynb) |
 
-The above Jupyter Notebook files are for testing the performance of the TRL on scaling up instance with factor n=4, 8, 12, 16, 20, 24 (**Table 4.1 and Figure 4.5**). The training and testing process of network are recored in these files. Please excute the codes in **"Offline_stage_xxpatch"** first for network offline training and then excute the codes in **"Test_online_xxpatch"** for network performance testing. 
+The above Jupyter Notebook files record the training and testing process of the TRL on scaling up instance with factor n=4, 8, 12, 16, 20, 24 (**Table 4.1 and Figure 4.5**).  Please excute the codes in **"Offline_stage_xxpatch"** first for network offline training and then excute the codes in **"Test_online_xxpatch"** for network performance testing. 
 
 ## Application to a Pandemic Control Case
 
 The _**exp3_case**_ folder contains the data, script and codes for numerical results in Section 5.
 
+The following Jupyter Notebook files:
 
+[Offline_stage_high](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Offline_stage_high.ipynb),  [Test_online_high](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Test_online_high.ipynb), [Offline_stage_low](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Offline_stage_low.ipynb), [Test_online_low](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Test_online_low.ipynb)
 
-## Replicating
+record the training and testing process of the TRL under high-level and low-level budget scenario (**Table 5.1**). Please excute the codes in **"Offline_stage_xxx"** first for network offline training and then excute the codes in **"Test_online_xxx"** for network performance testing.
 
-To replicate the results in [Figure 1](results/mult-test), do either
+## 
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+> [!NOTE]
+> Due to file upload size limitations, we have stored the initialization and training results of neural network weights on a cloud drive. Please refer to the Readme file in the **network initialization** and **result** folders in exp1_case, exp2_case, and exp3_case for details about these results.
+> 
+> If there is a need to retrain the neural network, please modify the code "istrain=1" to "istrain=0" in line 12 of the Train_main file in exp1_case, exp2_case, and exp3_case forlers.
+> 
+> For any issue in replication of these results, please contact [yuht@dlut.edu.cn](yuht@dlut.edu.cn)
