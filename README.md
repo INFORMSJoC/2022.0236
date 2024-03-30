@@ -33,7 +33,7 @@ Below is the BibTex for citing this snapshot of the respoitory.
 
 ## Description
 
-This repository includes the source code and computational results of transfer reinforcement learning approach for randomly generated numerical instances presented in the paper. The codes and random instance genereation work in a Miniforge3 environment with Python 3.9 in a M1 mac platform.
+This repository includes the source code and computational results of transfer reinforcement learning approach for randomly generated numerical instances presented in the paper. The codes and random instance generations work in a Miniforge3 environment with Python 3.9 in a M1 mac platform.
 
 ## Numerical Results on Solution Optimality and Robustness
 
