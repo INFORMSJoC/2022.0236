@@ -38,17 +38,16 @@ This repository includes the source code and computational results of transfer r
 ## Numerical Results on Solution Optimality and Robustness
 
 The exp1_case folder contains the data, script and codes for numercail results in Section 4.2.
-1. The Jupyter Notebook files [DRL_uncertainty_result.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_uncertainty_result.ipynb) and [TRL_uncertainty_result.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_uncertainty_result.ipynb) are for testing the performance of the TRL under different uncertainty intervals (Figure 4.1 and Figure 4.4) and record the training and testing process of network. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
-2. The Jupyter Notebook files [DRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [TRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_out_of_sample.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with bias to intervals (Figure 4.2) and record the training and testing process of network. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
-3. The Jupyter Notebook files [DRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [distribution shift/TRL_out_of_sample_result distribution shift.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/distribution shift/TRL_out_of_sample_result distribution shift.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with distributional shifts (Figure 4.3) and record the training and testing process of network. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
+1. The Jupyter Notebook files [DRL_uncertainty_result.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_uncertainty_result.ipynb) and [TRL_uncertainty_result.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_uncertainty_result.ipynb) are for testing the performance of the TRL under different uncertainty intervals (Figure 4.1 and Figure 4.4). The training and testing process of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
+2. The Jupyter Notebook files [DRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [TRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_out_of_sample.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with bias to intervals (Figure 4.2). The training and testing process of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
+3. The Jupyter Notebook files [DRL_out_of_sample.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [distribution shift/TRL_out_of_sample_result distribution shift.ipynb](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/distribution%20shift/TRL_out_of_sample_result%20distribution%20shift.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with distributional shifts (Figure 4.3). The training and testing process of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
 
 ## Numerical Results on Algorithm efficiency and Scability
 
 The exp2_case folder contains the data, script and codes for numercail results in Section 4.3 & 4.4.
 
 The following files:
-```
-Offline_stage_4patch.ipynb
+[Offline_stage_4patch.ipynb]
 Test_online_4patch.ipynb
 ```
 ```
