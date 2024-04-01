@@ -1,106 +1,73 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+[Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control](https://doi.org/10.1287/ijoc.2022.0236) by Mu Du, Hongtao Yu, Nan Kong. 
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2022.0236
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2022.0236.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{CacheTest,
-  author =        {T. Ralphs},
+@article{TRL for MOMDP-TVIVP,
+  author =        {Mu Du, Hongtao Yu, Nan Kong},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
+  title =         {{Transfer Reinforcement Learning for MOMDPs with Time-varying Interval-valued Parameters and Its Application in Pandemic Control}},
+  year =          {2024},
+  doi =           {10.1287/ijoc.2022.0236.cd},
+  url =           {https://github.com/INFORMSJoC/2022.0236},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+This repository includes the source code and computational results of transfer reinforcement learning approach for randomly generated numerical instances presented in the paper. The codes and random instance generations work in a Miniforge3 environment with Python 3.9 in a M1 mac platform.
 
-## Building
+## Numerical Results on Solution Optimality and Robustness
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+The _**exp1_case**_ folder contains the data, script, and codes for numerical results in Section 4.2 & 4.4.
+1. The Jupyter Notebook files [DRL_uncertainty_result](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_uncertainty_result.ipynb) and [TRL_uncertainty_result](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_uncertainty_result.ipynb) are for testing the performance of the TRL under different uncertainty intervals (**Figure 4.1 and Figure 4.4**). The training and testing processes of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
+2. The Jupyter Notebook files [DRL_out_of_sample](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [TRL_out_of_sample](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/TRL_out_of_sample.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with bias to intervals (**Figure 4.2**). The training and testing processes of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
+3. The Jupyter Notebook files [DRL_out_of_sample](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/DRL_out_of_sample.ipynb) and [TRL_out_of_sample_result distribution shift](https://github.com/yuht1993/2022.0236/blob/patch-1/exp1_case/distribution%20shift/TRL_out_of_sample_result%20distribution%20shift.ipynb) are for testing the performance of the TRL under different out-of-sample scenarios with distributional shifts (**Figure 4.3**). The training and testing processes of network are recored in these files. Please excute the codes in former file first for network offline training and then excute the codes in later file for network performance testing. 
 
-```
-make mult
-```
+## Numerical Results on Algorithm efficiency and Scability
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+The _**exp2_case**_ folder contains the data, script, and codes for numerical results of _**scaling up instances**_ in Section 4.3 & 4.4.
 
-```
-make clean
-make sum
-```
+| 24*20 dimensions | 48*40 dimensions | 72*60 dimensions | 96*80 dimensions | 120*100 dimensions | 144*120 dimensions |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| [Offline_stage_4patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_4patch)  | [Offline_stage_8patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_8patch.ipynb)  | [Offline_stage_12patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_12patch.ipynb) | [Offline_stage_16patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_16patch.ipynb) |[Offline_stage_20patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_20patch.ipynb) | [Offline_stage_24patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Offline_stage_24patch.ipynb) |
+| [Test_online_4patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_4patch.ipynb)  | [Test_online_8patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_8patch.ipynb) | [Test_online_12patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_12patch.ipynb) | [Test_online_16patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_16patch.ipynb) | [Test_online_20patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_20patch.ipynb) |[Test_online_24patch](https://github.com/yuht1993/2022.0236/blob/patch-1/exp2_case/Test_online_24patch.ipynb) |
 
-Be sure to make clean before building a different version of the code.
+The above Jupyter Notebook files record the training and testing processes of the TRL on scaling up instance with factor n=4, 8, 12, 16, 20, 24 (**Table 4.1 and Figure 4.5**).  Please excute the codes in **"Offline_stage_xxpatch"** first for network offline training and then excute the codes in **"Test_online_xxpatch"** for network performance testing. 
 
-## Results
+## Application to a Pandemic Control Case
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+The _**exp3_case**_ folder contains the data, script, and codes for numerical results in Section 5.
 
-![Figure 1](results/mult-test.png)
+The following Jupyter Notebook files:
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+[Offline_stage_high](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Offline_stage_high.ipynb),  [Test_online_high](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Test_online_high.ipynb), [Offline_stage_low](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Offline_stage_low.ipynb), [Test_online_low](https://github.com/yuht1993/2022.0236/blob/patch-1/exp3_case/Test_online_low.ipynb)
 
-![Figure 1](results/sum-test.png)
+record the training and testing processes of the TRL under high-level and low-level budget scenarios (**Table 5.1**). Please excute the codes in **"Offline_stage_xxx"** first for network offline training and then excute the codes in **"Test_online_xxx"** for network performance testing.
 
-## Replicating
+## 
 
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+> [!NOTE]
+> Due to file upload size limitations, we have stored the initialization and training results of neural network weights on a cloud drive. Please refer to the Readme file in the **network initialization** and **result** folders in exp1_case, exp2_case, and exp3_case for details about these results.
+> 
+> If there is a need to retrain the neural network, please modify the code "istrain=1" to "istrain=0" in line 12 within the Train_main file in exp1_case, exp2_case, and exp3_case forlers.
+> 
+> For any issue in replication of these results, please contact [yuht@dlut.edu.cn](yuht@dlut.edu.cn)
