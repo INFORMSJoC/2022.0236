@@ -74,4 +74,4 @@ The Jupyter Notebook files: **Offline_stage_high**,  **Test_online_high**, **Off
 
 ## Scripts
 
-This directory includes the scripts for training and testing the neural network for TRL implementation. Due to file upload size limitations, we have stored the initialization and training results of neural network weights on a cloud drive. Please refer to the Readme file in the **network initialization** and **training result** folders in exp1_case, exp2_case, and exp3_case for details about these results. For any issue about the cloud drive please contact [yuht@dlut.edu.cn](yuht@dlut.edu.cn)
+This directory includes the scripts for training and testing the neural network for TRL implementation. Due to file upload size limitations, we have stored the initialization and training results of neural network weights and related agent configuration files on a cloud drive. Please refer to the Readme file in the **network initialization** and **training result** folders in exp1_case, exp2_case, and exp3_case for details about these results. For any issue about the cloud drive please contact [yuht@dlut.edu.cn](yuht@dlut.edu.cn)
